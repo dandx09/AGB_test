@@ -1,0 +1,5 @@
+import os
+
+DATABASE_URL = os.getenv("DATABASE_URL")
+CELERY_BROKER_URL = os.getenv("CELERY_BROKER_URL")
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")

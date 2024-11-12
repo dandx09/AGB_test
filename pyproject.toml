@@ -1,0 +1,27 @@
+[tool.poetry]
+name = "agb-test"
+version = "0.1.0"
+description = ""
+authors = ["Попков Данила Витальевич <danilapopkow2003@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+fastapi = "^0.115.4"
+uvicorn = "^0.32.0"
+requests = "^2.32.3"
+python-dotenv = "^1.0.1"
+celery = {extras = ["redis"], version = "^5.4.0"}
+pydantic = "^2.9.2"
+openai = "^1.54.3"
+sqlalchemy = {extras = ["psycopg2"], version = "^2.0.36"}
+psycopg2 = "^2.9.10"
+
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^8.3.3"
+black = "^24.10.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
