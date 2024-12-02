@@ -26,7 +26,7 @@ def parse_xml_to_db(xml_data) -> list[Sales]:
     sales_data: list[Sales] = []
     date: datetime = datetime.strptime(
         root.attrib.get("date"), "%Y-%m-%d"
-    )  # todo добавить обработку ошибки, если нет даты
+    )
     for product in root.find("products"):
         sales_record = Sales(
             product_id=int(product.find("id").text),

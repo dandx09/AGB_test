@@ -11,7 +11,7 @@ logger = logging.getLogger(__name__)
 
 celery_app = Celery(
     "tasks", broker=CELERY_BROKER_URL
-)  # todo заменить localhost на redis и сделать иморт из .env
+)
 
 
 @celery_app.task
